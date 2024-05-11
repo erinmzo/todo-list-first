@@ -1,8 +1,10 @@
 import { useState } from "react";
 import List from "./List";
+import Modal from "./Modal";
 function Todo() {
   const [value, setValue] = useState("");
   const [todos, setTodos] = useState([]);
+  const [modal, setModal] = useState(false);
   const onChangeValue = (event) => {
     setValue(event.target.value);
   };
@@ -35,7 +37,15 @@ function Todo() {
           <div>
             {todos.map((todo) => {
               if (!todo.isDone) {
-                return <List key={todo.id} todos={todos} setTodos={setTodos} />;
+                return (
+                  <List
+                    key={todo.id}
+                    todos={todos}
+                    setTodos={setTodos}
+                    modal={modal}
+                    setModal={setModal}
+                  />
+                );
               }
             })}
           </div>
@@ -43,12 +53,21 @@ function Todo() {
           <div>
             {todos.map((todo) => {
               if (todo.isDone) {
-                return <List key={todo.id} todos={todos} setTodos={setTodos} />;
+                return (
+                  <List
+                    key={todo.id}
+                    todos={todos}
+                    setTodos={setTodos}
+                    modal={modal}
+                    setModal={setModal}
+                  />
+                );
               }
             })}
           </div>
         </div>
       </div>
+      {modal ? <Modal modal={modal} setModal={setModal} /> : null}
     </>
   );
 }

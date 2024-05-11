@@ -1,19 +1,34 @@
-function List({ todos, setTodos }) {
+function List({ todos, setTodos, modal, setModal }) {
+  const onModal = () => {
+    setModal((prev) => !prev);
+  };
   const onDeleteTodo = (id) => {
     const filteredTodo = todos.filter((todo) => todo.id !== id);
-    setTodos(filteredTodo);
+    onModal();
+    modal ? setTodos(filteredTodo) : null;
   };
 
   const onIsDone = (id) => {
+    const answer = confirm("완료하시겠습니까?");
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.isDone = !todo.isDone;
       }
       return todo;
     });
-    setTodos(newTodos);
+    answer ? setTodos(newTodos) : null;
   };
 
+  const onIsCancel = (id) => {
+    const answer = confirm("취소하시겠습니까?");
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.isDone = !todo.isDone;
+      }
+      return todo;
+    });
+    answer ? setTodos(newTodos) : null;
+  };
   return (
     <ul>
       {todos.map((el) => {
@@ -33,7 +48,7 @@ function List({ todos, setTodos }) {
                 {el.isDone === true ? (
                   <button
                     onClick={() => {
-                      onIsDone(el.id);
+                      onIsCancel(el.id);
                     }}
                   >
                     취소
