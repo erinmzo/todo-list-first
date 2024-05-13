@@ -21,6 +21,7 @@ function Todo() {
       date: `${new Date().getFullYear()}/${new Date().getMonth()}/${new Date().getDate()}`,
       isDone: false,
     };
+
     if (!newTodo.contents) {
       alert("내용을 입력해주세요.");
     } else if (newTodo.contents.length > 30) {
@@ -29,6 +30,9 @@ function Todo() {
       setTodos((prev) => [...prev, newTodo]);
       setValue("");
     }
+
+    const todosData = [...todos, newTodo];
+    window.localStorage.setItem(`todos`, JSON.stringify(todosData));
   };
 
   return (
