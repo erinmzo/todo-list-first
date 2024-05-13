@@ -7,10 +7,10 @@ function Modal({ setToggleModal, setTodos, clickedId }) {
       setToggleModal((prev) => !prev);
     }
   };
-  const onCancel = () => {
+  const onModalCancel = () => {
     setToggleModal((prev) => !prev);
   };
-  const onConfirm = () => {
+  const onDeleteConfirm = () => {
     setToggleModal((prev) => !prev);
     setTodos((prev) => {
       const filteredTodo = prev.filter((todo) => todo.id !== clickedId);
@@ -23,8 +23,8 @@ function Modal({ setToggleModal, setTodos, clickedId }) {
       <div className="alert-box">
         <div>삭제를 하시겠습니까?</div>
         <div className="btn-box">
-          <button onClick={onCancel}>취소</button>
-          <button onClick={onConfirm}>확인</button>
+          <button onClick={onModalCancel}>취소</button>
+          <button onClick={onDeleteConfirm}>확인</button>
         </div>
       </div>
     </div>

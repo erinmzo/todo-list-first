@@ -7,12 +7,12 @@ function Card({
   setToggleModal,
   setClickedId,
 }) {
-  const onDeleteTodo = () => {
+  const onOpenModal = () => {
     setToggleModal((prev) => !prev);
     setClickedId(id);
   };
 
-  const onToggle = (doneId) => {
+  const onDoneToggle = (doneId) => {
     setTodos((prev) =>
       prev.map((todo) => {
         if (todo.id === doneId) {
@@ -30,7 +30,7 @@ function Card({
         <span className="btn-box">
           <button
             onClick={() => {
-              onDeleteTodo(id);
+              onOpenModal(id);
             }}
           >
             삭제
@@ -38,7 +38,7 @@ function Card({
           {isDone === true ? (
             <button
               onClick={() => {
-                onToggle(id);
+                onDoneToggle(id);
               }}
             >
               취소
@@ -46,7 +46,7 @@ function Card({
           ) : (
             <button
               onClick={() => {
-                onToggle(id);
+                onDoneToggle(id);
               }}
             >
               완료
