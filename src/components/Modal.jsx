@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import "../style/Modal.css";
-
 function Modal({ setToggleModal, setTodos, clickedId }) {
   const ref = useRef(null);
   const onWrapCancel = (event) => {
@@ -13,7 +12,13 @@ function Modal({ setToggleModal, setTodos, clickedId }) {
   };
   const onConfirm = () => {
     setToggleModal((prev) => !prev);
-    setTodos((prev) => prev.filter((todo) => todo.id !== clickedId));
+    setTodos((prev) => {
+      const filteredTodo = prev.filter((todo) => todo.id !== clickedId);
+      localStorage.setItem("todos", JSON.stringify(filteredTodo));
+
+      console.log(filteredTodo);
+      return filteredTodo;
+    });
   };
   return (
     <div className="wrap" ref={ref} onClick={onWrapCancel}>
