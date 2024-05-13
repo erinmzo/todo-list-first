@@ -15,8 +15,6 @@ function Modal({ setToggleModal, setTodos, clickedId }) {
     setTodos((prev) => {
       const filteredTodo = prev.filter((todo) => todo.id !== clickedId);
       localStorage.setItem("todos", JSON.stringify(filteredTodo));
-
-      console.log(filteredTodo);
       return filteredTodo;
     });
   };
