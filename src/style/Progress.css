@@ -11,11 +11,11 @@ progress[value]::-webkit-progress-bar {
   overflow: hidden;
   height: 10px;
   border-radius: 10px;
-  background-color: #e1f3ff;
+  background-color: #f1f5ff;
 }
 progress[value]::-webkit-progress-value {
   overflow: hidden;
   height: 10px;
   border-radius: 10px;
-  background-color: #0089f1;
+  background-color: #2565ff;
 }
