@@ -12,12 +12,13 @@
 /* header */
 #header {
   padding: 40px 0;
-  background-color: #f1f5ff;
+  background-color: #2565ff;
 }
 
 #header h1 {
   font-size: 48px;
   font-weight: bold;
+  color: white;
 }
 #header h1 img {
   width: 38px;
@@ -37,16 +38,25 @@
 }
 .todo-box > form input {
   padding: 10px 0;
-  width: 520px;
+  width: 505px;
   border: none;
   border-bottom: 1px solid #ccc;
   margin-right: 10px;
   outline: none;
   font-size: 24px;
+  background-color: transparent;
+}
+
+.todo-box > form input::placeholder {
+  color: #bababa;
 }
 .todo-box > form button {
   padding: 7px 10px;
-  font-size: 24px;
+  font-size: 22px;
+  background-color: #2565ff;
+  color: white;
+  border: none;
+  border-radius: 7px;
 }
 .todo-box > .todo-cont > div {
   margin-top: 30px;

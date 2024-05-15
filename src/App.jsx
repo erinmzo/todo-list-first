@@ -5,10 +5,7 @@ function App() {
     <>
       <header id="header">
         <div className="container">
-          <h1>
-            <img src="/src/assets/todolist.png" />
-            Minsoo&apos;s To-Do
-          </h1>
+          <h1>🤓 Task to Easy</h1>
         </div>
       </header>
       <main id="main">

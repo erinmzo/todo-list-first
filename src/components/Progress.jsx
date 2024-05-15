@@ -6,7 +6,7 @@ function Progress({ todos }) {
 
   return (
     <>
-      <h2>🏃‍♀️ 진행도</h2>
+      <h2>🏃‍♀️ Progress</h2>
       <progress className="progress-box" value={doneLatio} max="100" />
     </>
   );

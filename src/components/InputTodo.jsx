@@ -39,9 +39,9 @@ function InputTodo({ todos, setTodos }) {
         type="text"
         value={value}
         onChange={onChangeValue}
-        placeholder="할 일을 입력해주세요."
+        placeholder="Please enter your to-do."
       />
-      <button type="submit">완료</button>
+      <button type="submit">submit</button>
     </form>
   );
 }
