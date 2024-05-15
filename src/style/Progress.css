@@ -17,5 +17,10 @@ progress[value]::-webkit-progress-value {
   overflow: hidden;
   height: 10px;
   border-radius: 10px;
-  background-color: #2565ff;
+  background: linear-gradient(
+    90deg,
+    rgba(38, 145, 222, 1) 0%,
+    rgba(8, 62, 199, 1) 53%,
+    rgba(184, 95, 250, 1) 100%
+  );
 }

@@ -7,9 +7,11 @@ function Modal({ setToggleModal, setTodos, clickedId }) {
       setToggleModal((prev) => !prev);
     }
   };
+
   const onModalCancel = () => {
     setToggleModal((prev) => !prev);
   };
+
   const onDeleteConfirm = () => {
     setToggleModal((prev) => !prev);
     setTodos((prev) => {

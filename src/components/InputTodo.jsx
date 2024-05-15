@@ -21,7 +21,9 @@ function InputTodo({ todos, setTodos }) {
     const newTodo = {
       id: new Date().getTime(),
       contents: value,
-      date: `${new Date().getFullYear()}/${new Date().getMonth()}/${new Date().getDate()}`,
+      date: `${new Date().getFullYear()}/${
+        new Date().getMonth() + 1
+      }/${new Date().getDate()}`,
       isDone: false,
     };
 
