@@ -5,7 +5,7 @@ import PaintTodo from "./PaintTodo";
 import Progress from "./Progress";
 
 function Todo() {
-  const data = JSON.parse(localStorage.getItem("todos"));
+  const data = JSON.parse(localStorage.getItem("todos")) || [];
   const [todos, setTodos] = useState(data);
   const [modal, setToggleModal] = useState(false);
   const [clickedId, setClickedId] = useState(null);
