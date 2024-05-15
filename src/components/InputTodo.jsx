@@ -8,6 +8,16 @@ function InputTodo({ todos, setTodos }) {
 
   const onSubmitTodo = (event) => {
     event.preventDefault();
+    if (!value) {
+      alert("내용을 입력해주세요.");
+      return;
+    }
+
+    if (value.length > 30) {
+      alert("30자 이내로 입력해주세요.");
+      return;
+    }
+
     const newTodo = {
       id: new Date().getTime(),
       contents: value,
@@ -15,14 +25,8 @@ function InputTodo({ todos, setTodos }) {
       isDone: false,
     };
 
-    if (!newTodo.contents) {
-      alert("내용을 입력해주세요.");
-    } else if (newTodo.contents.length > 30) {
-      alert("30자 이내로 입력해주세요.");
-    } else {
-      setTodos((prev) => [...prev, newTodo]);
-      setValue("");
-    }
+    setTodos((prev) => [...prev, newTodo]);
+    setValue("");
 
     const setTodosData = [...todos, newTodo];
     localStorage.setItem("todos", JSON.stringify(setTodosData));

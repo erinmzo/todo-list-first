@@ -1,6 +1,7 @@
 import "../style/Progress.css";
 
 function Progress({ todos }) {
+  console.log(todos);
   const doneTodo = todos.filter((el) => el.isDone === true);
   const doneLatio = (doneTodo.length / todos.length).toFixed(2) * 100;
 
