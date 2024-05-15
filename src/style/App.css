@@ -76,6 +76,7 @@
   border-radius: 15px;
   line-height: 1.5em;
 }
+
 .todo-box > div ul li > div {
   display: flex;
   justify-content: space-between;
@@ -101,4 +102,15 @@
 .btn-box button:last-child {
   background-color: #2565ff;
   color: #fff;
+}
+
+.btn-box button.cancel {
+  background-color: #677595;
+}
+
+.todo-cont > div.done {
+  background-color: #e0e2e8;
+}
+.todo-cont > div.done ul li {
+  background-color: #f4f4f4;
 }

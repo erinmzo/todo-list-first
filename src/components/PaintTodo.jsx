@@ -25,7 +25,7 @@ function PaintTodo({ todos, setTodos, setToggleModal, setClickedId }) {
         </ul>
       </div>
       <h2>😎 DONE</h2>
-      <div>
+      <div className="done">
         <ul>
           {todos.map((todo) => {
             if (todo.isDone) {

@@ -34,6 +34,7 @@ function Card({
           </button>
           {isDone === true ? (
             <button
+              className="cancel"
               onClick={() => {
                 onDoneToggle(id);
               }}
