@@ -33,7 +33,12 @@ function InputTodo({ todos, setTodos }) {
   };
   return (
     <form onSubmit={onSubmitTodo}>
-      <input type="text" value={value} onChange={onChangeValue} />
+      <input
+        type="text"
+        value={value}
+        onChange={onChangeValue}
+        placeholder="할 일을 입력해주세요."
+      />
       <button type="submit">완료</button>
     </form>
   );
