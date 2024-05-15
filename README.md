@@ -15,9 +15,9 @@ You can delete and mark tasks as complete, and track their progress.<br/>
 
 ## Featured
 
-- 투두 생성
-- 투두 삭제
-- 투두 완료 처리
-- 완료 취소처리
-- 프로그레스 바
-- 로컬 스토리지
+- Make task
+- Delete task
+- Complete task
+- Cancel done task
+- Progress bar
+- Save data to local storage
