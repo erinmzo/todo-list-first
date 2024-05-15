@@ -13,6 +13,7 @@ function App() {
           <Todo />
         </div>
       </main>
+      <footer id="footer">copyrigntⒸzomins</footer>
     </>
   );
 }
