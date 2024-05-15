@@ -12,15 +12,11 @@ function Card({
     setClickedId(id);
   };
 
-  const onDoneToggle = (clickedId) => {
+  const onDoneToggle = (clikedId) => {
     setTodos((prev) => {
-      const newTodos = prev.map((todo) => {
-        if (todo.id === clickedId) {
-          return { ...todo, isDone: !todo.isDone };
-        }
-        return todo;
+      return prev.map((todo) => {
+        return todo.id === clikedId ? { ...todo, isDone: !isDone } : todo;
       });
-      return newTodos;
     });
   };
   return (
